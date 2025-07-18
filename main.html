@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Мебель на заказ — Кухни, шкафы, гардеробные | 15 лет опыта</title>
+  <meta name="description" content="Мебель на заказ от производителя. Кухни, шкафы, гардеробные. 15 лет опыта, индивидуальный подход, контроль качества. Оставьте заявку!">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #2d5a8c;
+      --light: #f7f7f7;
+      --dark: #222;
+      --gray: #888;
+      --radius: 10px;
+      --about-bg: #eaf2fa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      background: black;
+      color: black;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+    .topbar {
+      background: var(--about-bg);
+      color: var(--accent);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 24px;
+      padding: 0 10px;
+      border-bottom: 1px solid #d0e2f2;
+      min-height: 0;
+    }
+    header {
+      background: url('https://i.postimg.cc/sx5WfP8V/IMG-8352.jpg') center/cover no-repeat;
+      color: #fff;
+      padding: 60px 0 40px 0;
+      text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute; left:0; top:0; right:0; bottom:0;
+      background: rgb(0, 0, 0, 0.7);
+      z-index: 1;
+    }
+    header > * { position: relative; z-index: 2; }
+    header h1 {
+      font-size: 2.1rem;
+      font-weight: 900;
+      line-height: 1.12;
+      margin-bottom: 22px;
+      letter-spacing: 0.01em;
+      word-break: break-word;
+    }
+    header p {
+      font-size: 1rem;
+      margin-bottom: 28px;
+    }
+    .cta-btn,
+    .contact-form button {
+      background: var(--about-bg);
+      color: var(--accent);
+      border: none;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, opacity 0.2s;
+      margin: 0 0 18px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      display: inline-block;
+      width: 200px;
+      text-align: center;
+      line-height: 1.2;
+      white-space: normal;
+      word-break: break-word;
+      opacity: 0.5;
+    }
+    .cta-btn:last-child {
+      margin-bottom: 0;
+    }
+    .cta-btn:hover,
+    .contact-form button:hover {
+      background: var(--accent);
+      color: #fff;
+      opacity: 1;
+    }
+    .contact-form button {
+      width: 100%;
+      margin: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    @media (min-width: 600px) {
+      .cta-btn {
+        display: inline-block;
+        margin: 0 14px 0 0;
+        vertical-align: middle;
+      }
+      .cta-btn:last-child {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 600px) {
+      .topbar { font-size: 0.92rem; height: 20px; }
+      header { padding: 32px 0 18px 0; }
+      header h1 { font-size: 1.2rem; }
+      .section-title { font-size: 1.1rem; }
+      .about-main { font-size: 1rem; }
+      .about-highlight { padding: 12px 6px 8px 6px; }
+      .product img, .gallery img { width: 100%; height: 100px; }
+      .map { min-width: 100%; min-height: 120px; }
+      .cta-btn {
+        width: 90%;
+        max-width: 200px;
+        min-width: 0;
+        margin: 0 auto 14px auto;
+        font-size: 0.95rem;
+        display: block;
+      }
+    }
+    section {
+      max-width: 1100px;
+      margin: 36px auto;
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+      padding: 28px 18px;
+    }
+    .section-title {
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin-bottom: 22px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .about-highlight {
+      background: var(--about-bg);
+      border-radius: var(--radius);
+      padding: 22px 14px 14px 14px;
+      margin-bottom: 22px;
+      text-align: center;
+    }
+    .about-main {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .benefits {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+    .benefit {
+      flex: 1 1 140px;
+      background: var(--light);
+      border-radius: var(--radius);
+      padding: 14px;
+      text-align: center;
+      min-width: 120px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+      font-size: 0.98rem;
+    }
+    .benefit-icon {
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+      color: var(--accent);
+    }
+    .catalog {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: space-between;
+    }
+    .product {
+      flex: 1 1 220px;
+      background: var(--light);
+      border-radius: var(--radius);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+      margin-bottom: 12px;
+      padding: 14px;
+      min-width: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.98rem;
+    }
+    .product img {
+      width: 100%;
+      max-width: 220px;
+      border-radius: var(--radius);
+      margin-bottom: 10px;
+      object-fit: cover;
+      height: 120px;
+    }
+    .product h3 {
+      margin: 8px 0 6px 0;
+      color: var(--accent);
+      font-size: 1.05rem;
+    }
+    .product p {
+      font-size: 0.98rem;
+      color: var(--dark);
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .step {
+      flex: 1 1 120px;
+      background: var(--light);
+      border-radius: var(--radius);
+      padding: 12px;
+      min-width: 100px;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+      font-size: 0.97rem;
+    }
+    .step-number {
+      font-size: 1.1rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .gallery img {
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .contact-info {
+      flex: 1 1 180px;
+      font-size: 0.98rem;
+    }
+    .contact-form {
+      flex: 1 1 200px;
+      background: var(--light);
+      border-radius: var(--radius);
+      padding: 12px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+      min-width: 120px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 8px;
+      border: 1px solid #ddd;
+      border-radius: var(--radius);
+      font-size: 0.98rem;
+      font-family: inherit;
+      resize: none;
+    }
+    .map {
+      margin-top: 12px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      min-width: 120px;
+      min-height: 120px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    }
+    .guarantees {
+      background: var(--light);
+      border-radius: var(--radius);
+      padding: 12px;
+      margin: 18px 0 0 0;
+      text-align: center;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    footer {
+      background: var(--dark);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+    @media (max-width: 900px) {
+      .benefits, .catalog, .steps, .contacts { flex-direction: column; gap: 12px; }
+      section { padding: 18px 6px; }
+    }
+  </style>
+  <script>
+    function scrollToSection(id) {
+      var el = document.getElementById(id);
+      if (el) el.scrollIntoView({behavior: "smooth"});
+    }
+    window.addEventListener('DOMContentLoaded', function() {
+      var form = document.getElementById('contactForm');
+      if(form) {
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          document.getElementById('formMsg').textContent = "Спасибо! Ваша заявка отправлена.";
+          form.reset();
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+
+<div class="topbar">
+  Мебельное производство
+</div>
+
+<header id="home">
+  <h1>
+    Создаем мебель,<br>
+    которая подходит<br>
+    именно Вам
+  </h1>
+  <p>
+    15 лет мы создаем кухни, шкафы и гардеробные системы,<br>
+    с высоким качеством и доступными ценами.
+  </p>
+  <button class="cta-btn" onclick="scrollToSection('contacts')">
+    Закажите бесплатную консультацию
+  </button>
+  <button class="cta-btn" onclick="scrollToSection('catalog')">
+    Посмотреть каталог
+  </button>
+</header>
+
+<section id="about">
+  <div class="about-highlight">
+    <div class="about-main">
+      15 лет создаём мебель, которая радует каждый день
+    </div>
+    <p>
+      Наша компания — команда профессионалов, которые с 2009 года воплощают в жизнь самые смелые идеи клиентов. Мы гордимся тем, что 70% заказов приходят по рекомендациям. Мы ценим честность, открытость и индивидуальный подход. Каждый проект — это уникальное решение, созданное с заботой о вашем комфорте и стиле.
+    </p>
+  </div>
+  <div class="benefits">
+    <div class="benefit">
+      <div class="benefit-icon">🎓</div>
+      <div><b>15 лет опыта</b><br>Доверие сотен клиентов</div>
+    </div>
+    <div class="benefit">
+      <div class="benefit-icon">💰</div>
+      <div><b>Честные цены</b><br>Прямое производство</div>
+    </div>
+    <div class="benefit">
+      <div class="benefit-icon">🎨</div>
+      <div><b>Индивидуальный проект</b><br>Под ваши задачи</div>
+    </div>
+  </div>
+</section>
+
+<section id="catalog">
+  <div class="section-title">Каталог продукции</div>
+  <div class="catalog">
+    <div class="product">
+      <img src="https://i.postimg.cc/bwmtvw62/photo-2025-07-18-14-35-11.jpg" alt="Кухня на заказ">
+      <h3>Кухни на заказ</h3>
+      <p>Современные, классические и минималистичные кухни. Любые размеры, цвета и комплектация. Только проверенные материалы и фурнитура.</p>
+      <button class="cta-btn" onclick="scrollToSection('contacts')">Оставить заявку</button>
+    </div>
+    <div class="product">
+      <img src="https://i.postimg.cc/JhtBHCgY/photo-2025-07-18-14-35-35.jpg" alt="Шкаф на заказ">
+      <h3>Шкафы-купе и распашные</h3>
+      <p>Вместительные и стильные шкафы для любой комнаты. Рациональное использование пространства, индивидуальный дизайн.</p>
+      <button class="cta-btn" onclick="scrollToSection('contacts')">Оставить заявку</button>
+    </div>
+    <div class="product">
+      <img src="https://i.postimg.cc/T1vysLPB/photo-2025-07-18-14-35-47.jpg" alt="Гардеробная на заказ">
+      <h3>Гардеробные системы</h3>
+      <p>Организуйте хранение вещей с максимальным удобством. Проектируем под ваши задачи и площадь.</p>
+      <button class="cta-btn" onclick="scrollToSection('contacts')">Оставить заявку</button>
+    </div>
+  </div>
+  <div class="section-title" style="font-size:1rem; margin-top:24px;">Примеры работ</div>
+  <div class="gallery">
+    <img src="https://i.postimg.cc/qqc9sYYW/photo-2025-07-18-14-59-42.jpg" alt="Пример кухни">
+    <img src="https://i.postimg.cc/sfpdCQXK/photo-2025-07-18-14-59-47.jpg" alt="Пример шкафа">
+    <img src="https://i.postimg.cc/zGG9hxkP/photo-2025-07-18-14-59-52.jpg" alt="Пример гардеробной">
+    <img src="https://i.postimg.cc/28ws3snZ/photo-2025-07-18-14-59-55.jpg" alt="Пример кухни">
+    <img src="https://i.postimg.cc/QxhL88KD/photo-2025-07-18-14-59-57.jpg" alt="Пример шкафа">
+    <img src="https://i.postimg.cc/dVNgjGHQ/photo-2025-07-18-15-00-02.jpg" alt="Пример гардеробной">
+    <img src="https://i.postimg.cc/rw29XsDG/IMG-8410.png" alt="Пример гардеробной">
+    <img src="https://i.postimg.cc/66S0cYwm/IMG-8411.png" alt="Пример кухни">
+    <img src="https://i.postimg.cc/zXgkcKGX/IMG-8412.png" alt="Пример шкафа">
+    <img src="https://i.postimg.cc/DwQP2hG9/IMG-8413.png" alt="Пример гардеробной">
+  </div>
+</section>
+
+<section id="steps">
+  <div class="section-title">Как мы работаем — просто и прозрачно</div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      <div>Заявка и консультация</div>
+      <div style="font-size:0.93rem; color:var(--gray);">Оставьте заявку — мы перезвоним и предложим решения</div>
+    </div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <div>Замер и проект</div>
+      <div style="font-size:0.93rem; color:var(--gray);">Бесплатный выезд замерщика, 3D-проект</div>
+    </div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <div>Договор и предоплата</div>
+      <div style="font-size:0.93rem; color:var(--gray);">Фиксируем стоимость</div>
+    </div>
+    <div class="step">
+      <div class="step-number">4</div>
+      <div>Производство</div>
+      <div style="font-size:0.93rem; color:var(--gray);">Изготавливаем мебель на собственном производстве</div>
+    </div>
+    <div class="step">
+      <div class="step-number">5</div>
+      <div>Доставка и монтаж</div>
+      <div style="font-size:0.93rem; color:var(--gray);">Привозим и устанавливаем — аккуратно и в срок</div>
+    </div>
+    <div class="step">
+      <div class="step-number">6</div>
+      <div>Поддержка</div>
+      <div style="font-size:0.93rem; color:var(--gray);">Всегда на связи</div>
+    </div>
+  </div>
+  <div class="guarantees">
+    Бесплатный замер и проект &nbsp;|&nbsp; Прозрачная смета — никаких скрытых платежей
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="section-title">Контакты</div>
+  <div class="contacts">
+    <div class="contact-info">
+      <h3>Свяжитесь с нами</h3>
+      <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+      <p><strong>Email:</strong> info@mebel-zakaz.ru</p>
+      <p><strong>Адрес:</strong> г. Москва, ул. Производственная, 15</p>
+      <p><strong>Режим работы:</strong><br>
+        Пн-Пт: 9:00 — 18:00<br>
+        Сб: 10:00 — 16:00<br>
+        Вс: выходной
+      </p>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.426!2d37.6173!3d55.7558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzIwLjkiTiAzN8KwMzcnMDIuMyJF!5e0!3m2!1sru!2sru!4v1!5m2!1sru!2sru" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>Заказать консультацию</h3>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" name="phone" placeholder="Телефон" required>
+        <input type="email" name="email" placeholder="Email">
+        <textarea name="message" rows="4" placeholder="Сообщение"></textarea>
+        <button type="submit">Отправить заявку</button>
+      </form>
+      <div id="formMsg" style="color: var(--accent); font-weight: 700; margin-top: 10px;"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2024 Мебель на заказ. Все права защищены.</p>
+  <p>Изготовление мебели на заказ с 2009 года</p>
+</footer>
+
+</body>
+</html>
